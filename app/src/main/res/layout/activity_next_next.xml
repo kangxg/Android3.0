@@ -6,19 +6,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="下一页"
-            android:id="@+id/tipButton"/>
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="30dp"
 
-            android:text="第二页!"
-            android:id="@+id/tiptview"
+            android:text="第三页!"
+            android:id="@+id/secondview"
             />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="返回上一页"
+            android:id="@+id/closeButton"/>
+
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
