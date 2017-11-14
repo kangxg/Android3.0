@@ -2,6 +2,8 @@ package com.example.kangxg.android30;
 
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -15,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.showGifAnimation();
+        this.showFadeAnimation();
     }
     private void showFrameAnimation()
     {
@@ -47,5 +49,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
+    private  void  showFadeAnimation()
+    {
+        Drawable[] drawableArray = {
+                getResources().getDrawable(R.drawable.fade_begin),
+                getResources().getDrawable(R.drawable.fade_end),
+        };
+        TransitionDrawable td_fade = new TransitionDrawable(drawableArray);
+        ImageView image = findViewById(R.id.frameAnim);
+        image.setImageDrawable(td_fade);
+        td_fade.startTransition(3300);
+    }
 }
